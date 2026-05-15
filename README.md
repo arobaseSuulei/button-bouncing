@@ -34,7 +34,7 @@ Le montage intègre une gestion du **rebond mécanique** (bouncing) pour éviter
 
 
 
-## Pourquoi INPUT_PULLUP ?
+## Pourquoi INPUT_PULLUP
 
 Sans résistance externe, la pin du bouton **flotte** (valeur indéfinie) quand le bouton est relâché.
 `INPUT_PULLUP` active une résistance interne à l'Arduino qui maintient la pin à `HIGH` au repos.
