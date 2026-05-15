@@ -32,39 +32,7 @@ Le montage intègre une gestion du **rebond mécanique** (bouncing) pour éviter
 
 > ⚠️ Le bouton doit être orienté correctement sur la breadboard : les deux fils doivent être sur des pattes **opposées** du bouton, pas sur des pattes déjà connectées entre elles.
 
----
 
-## Code
-
-```cpp
-int ledPin = 10;
-int buttonPin = 2;
-bool ledState = false;
-bool lastButtonState = HIGH;
-unsigned long lastDebounceTime = 0;
-int debounceDelay = 200;
-
-void setup() {
-  pinMode(ledPin, OUTPUT);
-  pinMode(buttonPin, INPUT_PULLUP);
-}
-
-void loop() {
-  bool currentButton = digitalRead(buttonPin);
-
-  if (lastButtonState == HIGH && currentButton == LOW) {
-    if (millis() - lastDebounceTime > debounceDelay) {
-      ledState = !ledState;
-      digitalWrite(ledPin, ledState);
-      lastDebounceTime = millis();
-    }
-  }
-
-  lastButtonState = currentButton;
-}
-```
-
----
 
 ## Pourquoi INPUT_PULLUP ?
 
