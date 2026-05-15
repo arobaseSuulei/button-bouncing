@@ -7,7 +7,7 @@ Chaque appui bascule l'état de la LED (allumée → éteinte → allumée...).
 Le montage intègre une gestion du **rebond mécanique** (bouncing) pour éviter les faux déclenchements.
 
 
-![Montage](img/board.jpg)
+![Montage](img/montage.jpg)
 ---
 
 ## Matériel nécessaire
